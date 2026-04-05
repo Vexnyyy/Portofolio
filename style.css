@@ -1,0 +1,410 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #05070d;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* ================= GLOW BACKGROUND ================= */
+.bg-glow {
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #7c3aed, transparent 70%);
+    filter: blur(120px);
+    top: -200px;
+    left: -200px;
+    z-index: -1;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ================= NAV ================= */
+/* ================= NAVBAR MODERN ================= */
+header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1100px;
+    z-index: 1000;
+}
+
+.nav {
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 15px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* LOGO */
+.nav h1 {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/* MENU */
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #aaa;
+    font-size: 14px;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* hover underline effect */
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #7c3aed, #4f46e5);
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* THEME BUTTON */
+#theme-toggle {
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+}
+/* ================= HERO ================= */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-text h2 {
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.hero-text span {
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-text p {
+    margin: 20px 0;
+    color: #aaa;
+}
+
+.hero-img img {
+    width: 320px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(124,58,237,0.4);
+}
+
+/* ================= BUTTON ================= */
+.btn {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* ================= SECTION ================= */
+.section {
+    padding: 100px 0;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+/* ================= ABOUT ================= */
+.about-flex {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.about-info {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.about-info div {
+    background: rgba(255,255,255,0.05);
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.about-flex img {
+    width: 300px;
+    border-radius: 20px;
+}
+
+/* ================= GRID ================= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 25px;
+}
+
+/* ================= CARD ================= */
+.card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content p {
+    color: #aaa;
+}
+
+/* ================= SKILL MODERN ================= */
+
+.skill-desc {
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    color: #aaa;
+    margin-bottom: 50px;
+}
+
+/* container */
+.skill-box {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* card */
+.skill-card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 25px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* glow effect */
+.skill-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, #00f0ff33, transparent);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.skill-card:hover::before {
+    opacity: 1;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0,255,255,0.1);
+}
+
+/* icon */
+.skill-card i {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #00f0ff;
+}
+
+/* title */
+.skill-card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* tags */
+.tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tags span {
+    background: rgba(0,255,255,0.1);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #00f0ff;
+}
+
+
+/* ================= CONTACT ================= */
+/* ================= CONTACT ================= */
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.contact-card {
+    padding: 18px 25px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+
+    transition: 0.4s;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ICON */
+.contact-card i {
+    font-size: 18px;
+    color: #7c3aed;
+}
+
+/* HOVER EFFECT */
+.contact-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);
+    box-shadow: 0 10px 30px rgba(124,58,237,0.5);
+}
+
+.contact-card:hover i {
+    color: white;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    margin-top: 80px;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* garis glow atas footer */
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #7c3aed, transparent);
+}
+
+/* text */
+footer p {
+    color: #aaa;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* efek hover dikit */
+footer p:hover {
+    color: white;
+    transition: 0.3s;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+    .hero-flex,
+    .about-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h2 {
+        font-size: 40px;
+    }
+
+    .hero-img img {
+        width: 250px;
+    }
+}
